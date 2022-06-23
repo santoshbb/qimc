@@ -1,0 +1,23 @@
+{
+ "creation": "2021-11-24 18:50:08.295325",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{\"from_date\":\"2021-10-15\",\"to_date\":\"2021-11-24\",\"employee\":\"QIMC05\",\"report_type\":\"Daily Attendance Daitails\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "TEST",
+ "modified": "2021-11-24 18:51:34.380012",
+ "modified_by": "santosh@akwad.qa",
+ "module": "qimc",
+ "name": "TEST",
+ "owner": "santosh@akwad.qa",
+ "report_field": "deductible_hours",
+ "report_function": "Sum",
+ "report_name": "Employee Checkin and Attendance",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

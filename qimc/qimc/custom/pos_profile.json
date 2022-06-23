@@ -1,0 +1,41 @@
+{
+ "custom_fields": [],
+ "custom_perms": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "creation": "2020-05-02 00:24:20.778910",
+   "delete": 0,
+   "docstatus": 0,
+   "email": 0,
+   "export": 1,
+   "idx": 0,
+   "if_owner": 0,
+   "import": 0,
+   "modified": "2020-05-02 00:24:20.778910",
+   "modified_by": "Administrator",
+   "name": "713c81ffad",
+   "owner": "Administrator",
+   "parent": "POS Profile",
+   "parentfield": "permissions",
+   "parenttype": "DocType",
+   "permlevel": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "System Manager",
+   "set_user_permissions": 0,
+   "share": 0,
+   "submit": 0,
+   "write": 0
+  }
+ ],
+ "doctype": "POS Profile",
+ "property_setters": [],
+ "sync_on_migrate": 1
+}

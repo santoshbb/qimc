@@ -1,0 +1,804 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Attendance Request",
+  "is_active": 1,
+  "modified": "2021-08-15 12:03:59.628922",
+  "name": "Attendance Request = Employee+HRM",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "HR Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Attendance Request = Employee+HRM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM",
+    "update_field": "",
+    "update_value": ""
+   },
+   {
+    "allow_edit": "No Edit",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Attendance Request = Employee+HRM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected By LM",
+    "update_field": "",
+    "update_value": ""
+   },
+   {
+    "allow_edit": "No Edit",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Attendance Request = Employee+HRM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By All",
+    "update_field": "",
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Approved By All",
+    "parent": "Attendance Request = Employee+HRM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Rejected By LM",
+    "parent": "Attendance Request = Employee+HRM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM"
+   }
+  ],
+  "workflow_name": "Attendance Request = Employee+HRM",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Expense Claim",
+  "is_active": 1,
+  "modified": "2020-05-16 20:50:08.720535",
+  "name": "Expense Claim",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Expense Approver",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "HR Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HOD"
+   },
+   {
+    "allow_edit": "HR Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HR",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HR"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Expense Approver",
+    "condition": null,
+    "next_state": "Approved By HOD",
+    "parent": "Expense Claim",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Approved By HR",
+    "parent": "Expense Claim",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD"
+   }
+  ],
+  "workflow_name": "Expense Claim",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Loan",
+  "is_active": 1,
+  "modified": "2020-05-16 20:54:50.777882",
+  "name": "Loan",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "CEO",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Loan",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "CEO",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Loan",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By CEO",
+    "update_field": "workflow_state",
+    "update_value": "Approved By CEO"
+   },
+   {
+    "allow_edit": "CEO",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Loan",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": "workflow_state",
+    "update_value": "Approved"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "CEO",
+    "condition": null,
+    "next_state": "Approved By CEO",
+    "parent": "Loan",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Loan",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved By CEO"
+   }
+  ],
+  "workflow_name": "Loan",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Sales Order",
+  "is_active": 1,
+  "modified": "2020-05-16 20:56:59.640501",
+  "name": "Sales Order",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Sales Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Order",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Sales Order",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HOD"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Sales Manager",
+    "condition": null,
+    "next_state": "Approved By HOD",
+    "parent": "Sales Order",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   }
+  ],
+  "workflow_name": "Sales Order",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Supplier Quotation",
+  "is_active": 1,
+  "modified": "2020-05-16 20:50:37.980652",
+  "name": "Supplier Quotation",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Purchase Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Supplier Quotation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Supplier Quotation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HOD"
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Supplier Quotation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By FM",
+    "update_field": "workflow_state",
+    "update_value": "Approved By FM"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Purchase Manager",
+    "condition": null,
+    "next_state": "Approved By HOD",
+    "parent": "Supplier Quotation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": null,
+    "next_state": "Approved By FM",
+    "parent": "Supplier Quotation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD"
+   }
+  ],
+  "workflow_name": "Supplier Quotation",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Material Request",
+  "is_active": 1,
+  "modified": "2020-11-17 14:28:48.718437",
+  "name": "Material Request",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Material Request",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "CEO",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Material Request",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HOD"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": "doc.ind_department1==\"Accounts - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": "doc.ind_department1==\"Human Resources - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Purchase Manager",
+    "condition": "doc.ind_department1==\"Purchase - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "CEO",
+    "condition": "doc.ind_department1==\"Safety - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": "doc.ind_department1==\"Security - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": "doc.ind_department1==\"Transportation - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": "doc.ind_department1==\"Electrical Maintenance- QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": "doc.ind_department1==\"Maintenance - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": "doc.ind_department1==\"Mechanical Maintenance - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": "doc.ind_department1==\"Mould Maintenance - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": "doc.ind_department1==\"WIP Maintenance - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Manufacturing Manager",
+    "condition": "doc.ind_department1==\"Production - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "CEO",
+    "condition": "doc.ind_department1==\"Quality control - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Stock Manager",
+    "condition": "doc.ind_department1==\"WH - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Sales Manager",
+    "condition": "doc.ind_department1==\"Sales - QIMC\"",
+    "next_state": "Approved By HOD",
+    "parent": "Material Request",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   }
+  ],
+  "workflow_name": "Material Request",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Delivery Note",
+  "is_active": 1,
+  "modified": "2020-05-16 20:57:16.419723",
+  "name": "Delivery Note",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "Stock User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Delivery Note",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Delivery Note",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By Sales",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Delivery Note",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By FM",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Sales Manager",
+    "condition": null,
+    "next_state": "Approved By Sales",
+    "parent": "Delivery Note",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": null,
+    "next_state": "Approved By FM",
+    "parent": "Delivery Note",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved By Sales"
+   }
+  ],
+  "workflow_name": "Delivery Note",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Purchase Order",
+  "is_active": 1,
+  "modified": "2020-06-01 21:43:10.225312",
+  "name": "Purchase Order",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Purchase User",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Purchase Order",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Accounts Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Purchase Order",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By FM",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "CEO",
+    "condition": null,
+    "next_state": "Approved By FM",
+    "parent": "Purchase Order",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   }
+  ],
+  "workflow_name": "Purchase Order",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Leave Application",
+  "is_active": 1,
+  "modified": "2020-05-16 20:49:34.640524",
+  "name": "Leave Application",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Leave Application",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Created",
+    "update_field": "workflow_state",
+    "update_value": "Created"
+   },
+   {
+    "allow_edit": "HR Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Leave Application",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HOD"
+   },
+   {
+    "allow_edit": "HR Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Leave Application",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved By HR",
+    "update_field": "workflow_state",
+    "update_value": "Approved By HR"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Leave Approver",
+    "condition": null,
+    "next_state": "Approved By HOD",
+    "parent": "Leave Application",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Created"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Approved By HR",
+    "parent": "Leave Application",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved By HOD"
+   }
+  ],
+  "workflow_name": "Leave Application",
+  "workflow_state_field": "workflow_state"
+ }
+]

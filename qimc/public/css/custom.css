@@ -1,0 +1,152 @@
+/*
+ * Skin: Blue
+ * ----------
+ */
+body { 
+    font-size: 16px;
+    line-height: 1.42857143;  
+}
+h6.uppercase, .h6.uppercase {
+    font-size: 16px;
+    font-weight: bold;   
+} 
+
+kbd {
+    color: #333;
+    background-color: #f0f4f7;
+}
+
+
+.control-label, .grid-heading-row {
+    color: #8d99a6;
+    font-size: 16px;
+}
+/*POINT OF SALE*/
+body[data-route=point-of-sale] {
+    background: #3663bd;
+}
+body[data-route=point-of-sale] .indicator, .indicator-right { 
+    font-size: 16px; 
+    color: #fff;
+}
+body[data-route=point-of-sale] .list-item:hover {
+    background-color: #f7fafc;
+    color: #6c7680;
+}
+body[data-route=point-of-sale] .input-group-btn > .btn {
+    position: relative;
+    color: #333;
+}
+body[data-route=point-of-sale] .list-item--head .text-muted {
+    color: #333!important;
+    font-size: 16px;
+    font-weight: 700;
+}
+body[data-route=point-of-sale] .control-label, body[data-route=point-of-sale] .grid-heading-row {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+body[data-route=point-of-sale] .text-muted,
+body[data-route=point-of-sale] .list-item__content--flex-2,
+body[data-route=point-of-sale] .net-total,
+body[data-route=point-of-sale] .taxes {
+	
+    color: #fff!important;
+    font-size: 16px;
+    font-weight: 600;
+}
+ 
+ 
+body[data-route=point-of-sale] .list-item:hover > .text-muted,
+body[data-route=point-of-sale] .list-item:hover > .list-item__content--flex-2,
+body[data-route=point-of-sale] .net-total,
+body[data-route=point-of-sale] .taxes{
+    color: #334!important;
+}
+body[data-route=point-of-sale] .empty-state span {
+    font-size: 14px;
+    color: #fff;
+}
+body[data-route=point-of-sale] .pos-cart .num-col > div {
+    color: #fff!important;
+    font-weight: 600;
+}
+body[data-route=point-of-sale] .cart-items .list-item.current-item {
+    background-color: #fffce7;
+    color: #333;
+}
+body[data-route=point-of-sale] .modal-body.ui-front label.control-label {
+    color: #333;
+}
+body[data-route=point-of-sale] .num-col.active > div {
+    color: #333!important;
+}
+body[data-route=point-of-sale] .num-col.brand-primary {
+    background-color: #2eb71e;
+    color: #ffffff;
+}
+body[data-route=point-of-sale] .layout-main-section {
+    border: 0px solid #d1d8dd;
+    border-top: 0px;
+}
+
+body[data-route=point-of-sale]  .pos-item-wrapper-1 a.grey.list-id {
+    padding: 20px 15px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+}
+
+body[data-route=point-of-sale]  .pos-item-wrapper-1:last-child a.grey.list-id { 
+    border-bottom: 0px solid #fff;  
+}
+body[data-route=point-of-sale]  .pos-item-wrapper-1 a.grey.list-id:hover {  
+    color:#333;
+    background: #fff;
+}
+body[data-route=point-of-sale]  .image-view-container .image-view-row {
+    display: block;
+    border-bottom: 1px solid #ebeff2;
+}
+body[data-route=point-of-sale]  .image-view-container .image-view-item {
+    flex: 0 0 100%;
+    padding: 15px;
+    border-bottom: 1px solid #ebeff2;
+    border-right: 1px solid #ebeff2;
+    max-width: 100%;
+} 
+ 
+body[data-route=point-of-sale]  .pos-item-wrapper {
+    display: block!important;
+    flex-direction: column;
+    position: relative;
+    width: 100%!important;
+}
+body[data-route=point-of-sale]  .pos-item-wrapper.image-view-item a {
+    color: #fff;
+}
+body[data-route=point-of-sale]  .pos-item-wrapper.image-view-item:hover {
+    background: #fff;
+}
+body[data-route=point-of-sale]  .pos-item-wrapper.image-view-item:hover > a {
+    color: #333;
+}
+body[data-route=point-of-sale]  .clusterize-no-data {
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+body[data-route=point-of-sale] .pos-item-wrapper.image-view-item.qty-warning { 
+    border-right: 5px solid  #e6c355;
+}
+body[data-route=point-of-sale] .pos-item-wrapper.image-view-item.qty-danger { 
+    border-right: 5px solid red;
+}
+.form-control { 
+    height: 40px; 
+    font-size: 18px; 
+}
+/*END*/

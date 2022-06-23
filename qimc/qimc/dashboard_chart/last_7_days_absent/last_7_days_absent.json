@@ -1,0 +1,56 @@
+{
+ "based_on": "",
+ "chart_name": "Last 7 Days Absent",
+ "chart_type": "Report",
+ "creation": "2021-11-27 22:22:57.919224",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{\"doc_status\":\"Submited\",\"report_type\":\"Attendance Summary\",\"from_date\":\"2021-11-20\",\"to_date\":\"2021-11-27\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2021-11-27 22:38:13.055166",
+ "modified_by": "Administrator",
+ "module": "qimc",
+ "name": "Last 7 Days Absent",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Attendance Sheet",
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "x_field": "employee_name",
+ "y_axis": [
+  {
+   "color": "#29CD42",
+   "y_field": "present"
+  },
+  {
+   "color": "#CB2929",
+   "y_field": "absent"
+  },
+  {
+   "color": "#B4CD29",
+   "y_field": "leave"
+  },
+  {
+   "color": "#761ACB",
+   "y_field": "total_days_wo"
+  },
+  {
+   "color": "#CB2929",
+   "y_field": "deductible_hours"
+  },
+  {
+   "color": "#29CD42",
+   "y_field": "approved_hours"
+  }
+ ]
+}

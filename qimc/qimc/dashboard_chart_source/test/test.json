@@ -1,0 +1,13 @@
+{
+ "creation": "2019-10-08 11:30:54.099618",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2019-10-08 11:30:55.029965",
+ "modified_by": "Administrator",
+ "module": "qimc",
+ "name": "Test",
+ "owner": "Administrator",
+ "source_name": "Test",
+ "timeseries": 1
+}

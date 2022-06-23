@@ -1,0 +1,13 @@
+{
+ "creation": "2021-11-26 03:35:22.075754",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-11-26 03:35:22.075754",
+ "modified_by": "Administrator",
+ "module": "qimc",
+ "name": "Dashboard Chart Source1",
+ "owner": "Administrator",
+ "source_name": "Dashboard Chart Source1",
+ "timeseries": 1
+}

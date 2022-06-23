@@ -1,0 +1,41 @@
+{
+ "custom_fields": [],
+ "custom_perms": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "creation": "2016-12-09 14:27:32.720061",
+   "delete": 1,
+   "docstatus": 0,
+   "email": 1,
+   "export": 0,
+   "idx": 1,
+   "if_owner": 0,
+   "import": 0,
+   "modified": "2019-11-21 15:01:53.389647",
+   "modified_by": "Administrator",
+   "name": "321cbea6be",
+   "owner": "Administrator",
+   "parent": "Data Import",
+   "parentfield": "permissions",
+   "parenttype": "DocType",
+   "permlevel": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "System Manager",
+   "set_user_permissions": 0,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "doctype": "Data Import",
+ "property_setters": [],
+ "sync_on_migrate": 1
+}

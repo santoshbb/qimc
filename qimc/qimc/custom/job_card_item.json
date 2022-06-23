@@ -1,0 +1,31 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Job Card Item",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2019-10-30 15:11:15.398260",
+   "default_value": null,
+   "doc_type": "Job Card Item",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "source_warehouse",
+   "idx": 0,
+   "modified": "2019-10-30 15:11:15.398260",
+   "modified_by": "Administrator",
+   "name": "Job Card Item-source_warehouse-default",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "default",
+   "property_type": "Text",
+   "value": ""
+  }
+ ],
+ "sync_on_migrate": 1
+}

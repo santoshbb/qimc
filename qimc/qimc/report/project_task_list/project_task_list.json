@@ -1,0 +1,25 @@
+{
+ "add_total_row": 1,
+ "creation": "2019-10-23 08:27:41.022118",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "QIMC",
+ "modified": "2019-10-23 08:30:19.063256",
+ "modified_by": "Administrator",
+ "module": "qimc",
+ "name": "Project Task List",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Task",
+ "report_name": "Project Task List",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Projects User"
+  }
+ ]
+}

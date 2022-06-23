@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "User Permission",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2021-09-25 22:43:10.737206",
+   "default_value": null,
+   "doc_type": "User Permission",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "apply_to_all_doctypes",
+   "idx": 0,
+   "modified": "2021-09-25 22:43:10.737206",
+   "modified_by": "Administrator",
+   "name": "User Permission-apply_to_all_doctypes-in_list_view",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "in_list_view",
+   "property_type": "Check",
+   "row_name": null,
+   "value": "1"
+  }
+ ],
+ "sync_on_migrate": 1
+}
